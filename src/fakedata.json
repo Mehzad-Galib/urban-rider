@@ -1,0 +1,4 @@
+[{"id":1,"Mode":"Bike", "person": 4, "fare": "$100"},
+    {"id":2,"Mode":"Bus", "person": 6, "fare": "$120"},
+    {"id":3,"Mode":"Car","person": 2, "fare": "$60"},
+    {"id":4,"Mode":"Train","person": 1, "fare": "$40"}]

@@ -2,6 +2,7 @@ import React, { useEffect,useState } from "react";
 import Info from '../../MOCK_DATA.json';
 import System from '../System/System';
 
+
 const Home = () => {
   const [media, setMedia] = useState([]);
   useEffect(()=>{
