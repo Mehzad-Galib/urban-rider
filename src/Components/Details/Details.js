@@ -7,8 +7,7 @@ import GoogleMapReact from "google-map-react";
 import { useForm } from "react-hook-form";
 import { Card } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-
+import { faMoneyBill, faUsers } from "@fortawesome/free-solid-svg-icons";
 const travelInfo = [
   {option: 1, person: 4, fare: 100},
   {option: 2, person: 2, fare: 60},
@@ -28,7 +27,7 @@ const Details = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const { id } = useParams();
   const product = Info.find((mode) => mode.id == id);
-  const { Mode } = product;
+  const { Mode, image } = product;
 
   return (
     <div className="container mt-5">
@@ -57,14 +56,17 @@ const Details = () => {
             </form>
             <h6>From: {destination.from}</h6>
             <h6>To: {destination.to}</h6>
-
+            
             {
-              destination.to ? (
-                <>
-            <Card>Person:{travelInfo[0].person} Fare: ${travelInfo[0].fare}</Card> 
-            <Card>Person: {travelInfo[1].person} Fare: ${travelInfo[2].fare}</Card> 
-            <Card>Person: {travelInfo[2].person} Fare: ${travelInfo[2].fare}</Card> 
-                </>
+              destination.to && destination.from ? (
+                <div>
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[0].person} Fare: ${travelInfo[0].fare}</Card> 
+
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[1].person} Fare ${travelInfo[1].fare}</Card> 
+
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[2].person} Fare: ${travelInfo[2].fare}</Card> 
+            
+                </div>
               ) : null
             }
             
