@@ -6,11 +6,10 @@ const Header = () => {
   return (
     <>
       <Navbar className="Container mr-5 ml-5" bg="dark" variant="dark">
-        <Navbar.Brand as={Link} to={`/home/`}>Sustainable Travelling</Navbar.Brand>
-        <Nav className="mr-auto">
+        <Navbar.Brand as={Link} to={`/home/`}>Peaceful Travel Planning</Navbar.Brand>
+        <Nav className="mr-auto align-items-end">
           <Nav.Link as={Link} to={`/home/`}>Home</Nav.Link>
           <Nav.Link as={Link} to={`/details/`}>Destination</Nav.Link>
-          
           <Button as={Link} to={`/login/`} variant="outline-info">Login</Button>
         </Nav>
       </Navbar>
