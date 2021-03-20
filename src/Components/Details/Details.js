@@ -6,8 +6,7 @@ import Info from "../../MOCK_DATA.json";
 import GoogleMapReact from "google-map-react";
 import { useForm } from "react-hook-form";
 import { Card } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyBill, faUsers } from "@fortawesome/free-solid-svg-icons";
+import Map from "../Map/Map";
 const travelInfo = [
   {option: 1, person: 4, fare: 100},
   {option: 2, person: 2, fare: 60},
@@ -60,11 +59,11 @@ const Details = () => {
             {
               destination.to && destination.from ? (
                 <div>
-            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[0].person} Fare: ${travelInfo[0].fare}</Card> 
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode}; Person: {travelInfo[0].person}; Fare: ${travelInfo[0].fare}</Card> 
 
-            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[1].person} Fare ${travelInfo[1].fare}</Card> 
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode}; Person: {travelInfo[1].person}; Fare ${travelInfo[1].fare}</Card> 
 
-            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode} Person: {travelInfo[2].person} Fare: ${travelInfo[2].fare}</Card> 
+            <Card><img style={{height: '40px', width: '45px'}} src={image} alt=''></img> Mode: {Mode}; Person: {travelInfo[2].person}; Fare: ${travelInfo[2].fare}</Card> 
             
                 </div>
               ) : null
@@ -72,20 +71,8 @@ const Details = () => {
             
           </div>
           <div className="col-md-9">
-            <h2>Map</h2>
-            <div style={{ height: "100vh", width: "100%" }}>
-              <GoogleMapReact
-                bootstrapURLKeys={{
-                  key: "AIzaSyBFmd3YX-NLeqrcQEeCIFnU8fW4UNKzihk",
-                }}
-              >
-                <AnyReactComponent
-                  lat={59.955413}
-                  lng={30.337844}
-                  text="My Marker"
-                />
-              </GoogleMapReact>
-            </div>
+          <Map></Map>
+            
           </div>
         </div>
       </div>
