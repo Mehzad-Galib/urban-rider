@@ -9,7 +9,7 @@ const Header = () => {
         <Navbar.Brand as={Link} to={`/home/`}>Peaceful Travel Planning</Navbar.Brand>
         <Nav className="mr-auto align-items-end">
           <Nav.Link as={Link} to={`/home/`}>Home</Nav.Link>
-          <Nav.Link as={Link} to={`/details/`}>Destination</Nav.Link>
+          <Nav.Link as={Link} to={`/details/1/`}>Destination</Nav.Link>
           <Button as={Link} to={`/login/`} variant="outline-info">Login</Button>
         </Nav>
       </Navbar>

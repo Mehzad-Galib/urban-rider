@@ -10,7 +10,7 @@ import { Button } from "react-bootstrap";
 const System = (props) => {
     const {Mode, image, id} = props.way;
     return (
-        <div className="col-md-3">
+        <div className="col-md-3 col-sm-6">
             <Card>
               <Button variant="outline-dark" as={Link} to={`/details/${id}`}>
               <CardActionArea>
