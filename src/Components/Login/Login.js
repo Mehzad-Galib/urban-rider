@@ -118,7 +118,7 @@ const Login = () => {
         history.replace(from);
       })
       .catch((error) => {
-        // Handle Errors here.
+        
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorCode, errorMessage);
